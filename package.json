@@ -19,6 +19,6 @@
     "@vitejs/plugin-react": "^4.3.4"
   },
   "engines": {
-    "node": "24.x"
+    "node": "22.x"
   }
 }

@@ -586,4 +586,30 @@ body {
   text-shadow: 0 1px 0 rgba(0,0,0,0.2);
 }
 
+
+@media (max-width: 560px) {
+  .top-bar {
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .aqi-num {
+    font-size: 24px;
+  }
+
+  .aqi-sub {
+    font-size: 6px;
+    line-height: 1.25;
+  }
+
+  .aqi-right {
+    font-size: 5px;
+    line-height: 1.25;
+    text-align: right;
+    max-width: 46%;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+}
+
 }

@@ -219,12 +219,6 @@ body {
 }
 
 .aqi-right {
-  font-size: 11px;
-  color: var(--text-dim);
-  line-height: 1.7;
-}
-
-.aqi-right {
   text-align: right;
   font-size: 11px;
   color: var(--text);

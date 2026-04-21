@@ -1,7 +1,7 @@
 import { create } from 'zustand'
-import { buildBangkokSegments, clampToBangkok, mergeExactCoordinateStations } from '../utils/geo'
-import { analyzeLocation } from '../utils/spatial'
-import { stationSeeds } from '../data/bangkokData'
+import { buildBangkokSegments, clampToBangkok, mergeExactCoordinateStations } from '../utils/geo.js'
+import { analyzeLocation } from '../utils/spatial.js'
+import { stationSeeds } from '../data/bangkokData.js'
 
 const initialPosition = { lng: 100.533, lat: 13.728 }
 const initialStations = mergeExactCoordinateStations(stationSeeds)

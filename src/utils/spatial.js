@@ -1,5 +1,5 @@
 import * as turf from '@turf/turf'
-import { getAqiBand } from './aqiScale'
+import { getAqiBand } from './aqiScale.js'
 
 export function analyzeLocation(position, geojson) {
   const point = turf.point([position.lng, position.lat])

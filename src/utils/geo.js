@@ -1,6 +1,6 @@
 import * as turf from '@turf/turf'
-import { BANGKOK_BOUNDS, sanctuaryZones } from '../data/bangkokData'
-import { bangkokBoundary } from '../data/bangkokBoundary'
+import { BANGKOK_BOUNDS, sanctuaryZones } from '../data/bangkokData.js'
+import { bangkokBoundary } from '../data/bangkokBoundary.js'
 
 function coordKey(station) {
   return `${Number(station.lat).toFixed(6)},${Number(station.lng).toFixed(6)}`

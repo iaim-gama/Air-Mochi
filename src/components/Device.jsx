@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react' 
-import MonitorMap from './MonitorMap'
-import { useAirMochiStore } from '../store/useAirMochiStore'
+import MonitorMap from './MonitorMap.jsx'
+import { useAirMochiStore } from '../store/useAirMochiStore.js'
 
 const AGE_STAGES = [
   { key: 'baby', icon: '🐣', label: 'BABY' },

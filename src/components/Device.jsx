@@ -69,7 +69,20 @@ export default function Device() {
     actionState,
   } = useAirMochiStore()
 
-   const MAX_FEED_STOCK = 3
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 560)
+
+useEffect(() => {
+  const handleResize = () => setIsMobile(window.innerWidth <= 560)
+  window.addEventListener('resize', handleResize)
+  return () => window.removeEventListener('resize', handleResize)
+}, [])
+
+const mobileAqiLabel =
+    analysis.aqiLabel === 'UNHEALTHY FOR SENSITIVE GROUPS'
+      ? 'SENSITIVE GROUPS'
+      : analysis.aqiLabel
+
+  const MAX_FEED_STOCK = 3
   const FEED_RECHARGE_MS = 30000
 
   const [, forceUpdate] = useState(0)
@@ -146,7 +159,7 @@ export default function Device() {
               </div>
 
               <div className="aqi-right">
-                <span>{analysis.aqiLabel}</span>
+                <span>{isMobile ? mobileAqiLabel : analysis.aqiLabel}</span>
               </div>
             </div>
 

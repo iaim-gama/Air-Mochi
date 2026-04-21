@@ -586,7 +586,7 @@ body {
 .aqi-right {
     font-size: 11px;      /* was too small before */
     line-height: 5;
-    max-width: 60%;
+    white-space: nowrap;
     text-align: right;
   }
 

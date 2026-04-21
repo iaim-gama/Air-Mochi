@@ -550,6 +550,10 @@ body {
 }
 
 
+.aqi-right {
+  font-size: clamp(7px, 2.5vw, 10px);
+}
+
 @media (max-width: 560px) {
   .page-shell {
   min-height: 100vh;

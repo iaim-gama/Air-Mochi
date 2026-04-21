@@ -607,4 +607,9 @@ html, body {
   line-height: 2;       /* easier to read */
 }
 
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
 }

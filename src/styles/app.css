@@ -22,6 +22,10 @@ body {
   color: var(--text);
 }
 
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
 .page-shell {
   min-height: 100vh;
   display: flex;

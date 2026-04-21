@@ -17,5 +17,9 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4"
-  }
+  },
+  "engines": {
+  "node": "18.x"
+}
+  
 }

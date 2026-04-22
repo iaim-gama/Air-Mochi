@@ -27,7 +27,7 @@ html, body {
   overflow: hidden;
 }
 .page-shell {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -560,7 +560,7 @@ html, body {
 
 @media (max-width: 560px) {
   .page-shell {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;

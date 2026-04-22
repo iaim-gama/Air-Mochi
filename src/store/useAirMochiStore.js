@@ -2,6 +2,8 @@ import { create } from 'zustand'
 import { buildBangkokSegments, clampToBangkok, mergeExactCoordinateStations } from '../utils/geo.js'
 import { analyzeLocation } from '../utils/spatial.js'
 import { stationSeeds } from '../data/bangkokData.js'
+import { fetchStationPm25 } from '../utils/aqi.js'
+import { BANGKOK_BOUNDS } from '../data/bangkokData.js'
 
 const initialPosition = { lng: 100.533, lat: 13.728 }
 const initialStations = mergeExactCoordinateStations(stationSeeds)
@@ -200,6 +202,28 @@ export const useAirMochiStore = create((set, get) => ({
   jumpToPark: () => get().setPosition({ lng: 100.5435, lat: 13.729 }),
 
   setTracking: (tracking) => set({ tracking }),
+
+  loadStations: async () => {
+  const currentStations = get().stations
+
+  try {
+    const result = await fetchStationPm25(currentStations, BANGKOK_BOUNDS)
+
+    const merged = mergeExactCoordinateStations(result.stations)
+    const geojson = buildBangkokSegments(merged)
+    const analysis = analyzeLocation(get().position, geojson)
+
+    set({
+      stations: merged,
+      geojson,
+      analysis,
+    })
+
+    console.log(result.note)
+  } catch (err) {
+    console.error("API fetch failed:", err)
+  }
+},
 }))
 
 setInterval(() => {

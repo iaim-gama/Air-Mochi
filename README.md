@@ -17,7 +17,6 @@ npm run dev
 
 ## Providers
 - `VITE_AIR_PROVIDER=waqi` → fetch Bangkok stations inside the Bangkok bounds and rebuild Voronoi segments
-- `VITE_AIR_PROVIDER=iqair` → update the seeded Bangkok points using IQAir nearest-city lookups
 
 ## Notes
 - If no valid token is provided, the app falls back to seeded Bangkok demo data.
